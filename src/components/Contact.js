@@ -3,20 +3,19 @@
 import React from "react";
 import "./Contact.css";
 
-const Contact = (props) => {
+const Contact = ({ contact }) => {
   return (
     <div className="container">
-      <div className="contact" key={props.contact.phone}>
+      <div className="contact" key={contact.phone}>
         <div className="contact_image">
-          <img src={props.contact.photo} alt={props.contact.name} />
+          <img src={contact.photo} alt={contact.name} />
         </div>
         <div className="contact_content">
-          <h1>{props.contact.name}</h1>
-          <p>{props.contact.phone}</p>
-          <p>{props.contact.email}</p>
+          <h1>{contact.name}</h1>
+          <p>{contact.phone}</p>
+          <p>{contact.email}</p>
         </div>
       </div>
-      {/* ))}*/}
     </div>
   );
 };
