@@ -7,9 +7,7 @@ const Contact = ({ contact }) => {
   return (
     <div className="container">
       <div className="contact" key={contact.phone}>
-        <div className="contact_image">
-          <img src={contact.photo} alt={contact.name} />
-        </div>
+        <div className="contact_image"></div>
         <div className="contact_content">
           <h1>{contact.name}</h1>
           <p>{contact.phone}</p>
