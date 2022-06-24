@@ -3,15 +3,17 @@
 import React from "react";
 import "./Contact.css";
 
-const Contact = ({ contact }) => {
+const Contact = ({ data }) => {
   return (
     <div className="container">
-      <div className="contact" key={contact.phone}>
-        <div className="contact_image"></div>
+      <div className="contact" key={data.phone}>
+        <div className="contact_image">
+          <img src={data.photo} alt={data.name} />
+        </div>
         <div className="contact_content">
-          <h1>{contact.name}</h1>
-          <p>{contact.phone}</p>
-          <p>{contact.email}</p>
+          <h1>{data.name}</h1>
+          <p>{data.phone}</p>
+          <p>{data.email}</p>
         </div>
       </div>
     </div>
